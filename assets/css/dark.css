@@ -1,0 +1,101 @@
+body{
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+/* Containers principais */
+.sidebar{
+  background: var(--sidebar) !important;
+}
+
+.card,
+.card-soft,
+.appointment-card,
+.dose-item{
+  background: var(--card) !important;
+  border-color: var(--border) !important;
+}
+
+/* Blocos internos */
+.stat-box,
+.fat-progress-inner{
+  background: var(--card2) !important;
+}
+
+/* Listas */
+.list .item,
+.appointment-new{
+  background: var(--card2) !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .25) !important;
+}
+
+.appointment-new-plus {
+    box-shadow: 0 2px 40px rgba(0, 0, 0, .25) !important;
+}
+
+/* Textos */
+.muted,
+.nav-title,
+.appointment-line,
+.dose-sub{
+  color: var(--muted) !important;
+}
+
+/* Sidebar links */
+.nav a{
+  color: var(--muted) !important;
+}
+
+.nav a.active{
+  color: var(--text) !important;
+}
+
+/* Bordas globais */
+*{
+  border-color: var(--border) !important;
+}
+
+/* Transição suave */
+body,
+.sidebar,
+.card,
+.stat-box,
+.appointment-card,
+.dose-item{
+  transition: background .25s, color .25s, border .25s;
+}
+
+/* Toggle Dark / Light */
+
+.topbar-actions{
+ display:flex;
+ align-items:center;
+ gap:12px;
+}
+
+.theme-toggle{
+ width:38px;
+ height:38px;
+ border-radius:50%;
+ border:1px solid var(--border);
+ background:linear-gradient(180deg,#0b1330,#0a1028);
+ color:var(--text);
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ cursor:pointer;
+ transition:.3s;
+}
+
+.theme-toggle:hover{
+ transform:rotate(15deg) scale(1.05);
+ border-color:rgba(45,212,191,.5);
+ color:#2dd4bf;
+}
+
+/* Ícone muda conforme tema */
+[data-theme="light"] .theme-toggle i{
+ color:#f59e0b;
+}
+

@@ -1,0 +1,390 @@
+:root{
+ --bio-bg:#050816;
+ --bio-card:#0b1330;
+ --bio-card2:#0c1430;
+ --bio-border:rgba(255,255,255,.08);
+ --bio-text:#e8f1ff;
+ --bio-muted:#9fb3c8;
+ --bio-primary:#2dd4bf;
+ --bio-blue:#38bdf8;
+ --bio-green:#22c55e;
+ --bio-warning:#facc15;
+ --bio-danger:#ef4444;
+}
+
+.bio-header{
+ margin-bottom:20px;
+}
+
+.bio-badge{
+ display:inline-block;
+ padding:6px 12px;
+ border-radius:999px;
+ background:rgba(56,189,248,.15);
+ color:#38bdf8;
+ font-size:11px;
+ font-weight:700;
+ margin-bottom:10px;
+ border:1px solid rgba(56,189,248,.3);
+}
+
+.bio-header h1{
+ margin:0;
+ font-size:26px;
+ font-weight:900;
+}
+
+.bio-header p{
+ margin:6px 0 0;
+ color:var(--bio-muted);
+ max-width:800px;
+}
+
+.bio-layout{
+ display:grid;
+ grid-template-columns:1.6fr 1fr;
+ gap:20px;
+}
+
+.bio-left,.bio-right{
+ display:flex;
+ flex-direction:column;
+ gap:20px;
+}
+
+/* CARD PRINCIPAL */
+
+.bio-box{
+ background:linear-gradient(180deg,#0b1330,#0a1028);
+ border-radius:22px;
+ padding:20px;
+ border:1px solid var(--bio-border);
+ box-shadow:0 10px 40px rgba(0,0,0,.25);
+}
+
+.bio-box-header{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ margin-bottom:16px;
+}
+
+.bio-box-title{
+ display:flex;
+ align-items:center;
+ gap:10px;
+ font-weight:800;
+}
+
+.bio-box-title i{
+ width:38px;
+ height:38px;
+ border-radius:12px;
+ background:linear-gradient(135deg,#38bdf8,#2dd4bf);
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ color:#051018;
+}
+
+.bio-box-tag{
+ padding:6px 12px;
+ border-radius:999px;
+ background:rgba(56,189,248,.15);
+ color:#38bdf8;
+ font-size:11px;
+ font-weight:800;
+ border:1px solid rgba(56,189,248,.3);
+}
+
+/* TOGGLE */
+
+.bio-toggle{
+ display:flex;
+ align-items:center;
+ gap:14px;
+ background:linear-gradient(180deg,#0c1430,#0a1028);
+ border:1px solid rgba(255,255,255,.05);
+ border-radius:14px;
+ padding:14px;
+ margin-bottom:14px;
+}
+
+.bio-muted{
+ font-size:12px;
+ color:var(--bio-muted);
+}
+
+.switch{
+ position:relative;
+ display:inline-block;
+ width:50px;
+ height:26px;
+}
+
+.switch input{display:none;}
+
+.slider{
+ position:absolute;
+ cursor:pointer;
+ top:0;left:0;right:0;bottom:0;
+ background:#0b122a;
+ transition:.3s;
+ border-radius:999px;
+ border:1px solid rgba(255,255,255,.1);
+}
+
+.slider:before{
+ position:absolute;
+ content:"";
+ height:20px;width:20px;
+ left:3px;bottom:2px;
+ background:#94a3b8;
+ transition:.3s;
+ border-radius:50%;
+}
+
+.switch input:checked + .slider{
+ background:linear-gradient(135deg,#22c55e,#2dd4bf);
+}
+
+.switch input:checked + .slider:before{
+ transform:translateX(22px);
+ background:#051018;
+}
+
+/* FORM */
+
+.bio-form{display:flex;flex-direction:column;}
+
+.bio-grid-2{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:12px;
+}
+
+.bio-field{
+ display:flex;
+ flex-direction:column;
+ gap:6px;
+}
+
+.bio-field label{
+ font-size:11px;
+ color:#7c8bbd;
+ font-weight:700;
+}
+
+.bio-field input,
+.bio-field select{
+ background:linear-gradient(180deg,#060b1c,#060b1c);
+ border:1px solid rgba(255,255,255,.08);
+ border-radius:12px;
+ padding:12px 14px;
+ color:#fff;
+ outline:none;
+}
+
+.bio-field input::placeholder{
+ color:#6b7aa8;
+}
+
+.bio-field input:focus,
+.bio-field select:focus{
+ border-color:#38bdf8;
+}
+
+/* MONJARO */
+
+.monjaro-panel{
+ display:none;
+ margin-bottom:14px;
+ padding:14px;
+ border-radius:14px;
+ background:linear-gradient(180deg,#0c1430,#0a1028);
+ border:1px solid rgba(255,255,255,.05);
+}
+
+.monjaro-panel.open{
+ display:block;
+}
+
+/* BOTÃO */
+
+.bio-btn{
+ margin-top:14px;
+ background:linear-gradient(135deg,#3b82f6,#60a5fa);
+ border:none;
+ border-radius:14px;
+ padding:14px;
+ font-weight:900;
+ color:#051018;
+ cursor:pointer;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ gap:10px;
+ font-size:15px;
+}
+
+/* ERRO */
+
+.bio-error{
+ display:none;
+ margin-top:10px;
+ padding:12px;
+ border-radius:12px;
+ background:rgba(239,68,68,.15);
+ border:1px solid rgba(239,68,68,.4);
+ color:#fecaca;
+}
+
+.bio-error.show{display:block;}
+
+/* RESULTADOS */
+
+.bio-results{
+ display:none;
+}
+
+.bio-results.show{
+ display:block;
+}
+
+.bio-cards-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:14px;
+}
+
+.bio-card{
+ background:linear-gradient(180deg,#0c1430,#0a1028);
+ border-radius:18px;
+ padding:16px;
+ border:1px solid rgba(255,255,255,.05);
+ display:flex;
+ flex-direction:column;
+ gap:6px;
+}
+
+.bio-small{
+ font-size:12px;
+ color:#9fb3c8;
+}
+
+.bio-pill,.res-pill{
+ display:inline-block;
+ margin-top:4px;
+ padding:4px 10px;
+ border-radius:999px;
+ font-size:11px;
+ font-weight:700;
+ background:rgba(45,212,191,.15);
+ color:#2dd4bf;
+ border:1px solid rgba(45,212,191,.4);
+}
+
+.res-pill.warning{
+ background:rgba(250,204,21,.15);
+ color:#facc15;
+ border-color:rgba(250,204,21,.4);
+}
+
+.res-pill.danger{
+ background:rgba(239,68,68,.15);
+ color:#ef4444;
+ border-color:rgba(239,68,68,.4);
+}
+
+/* COLUNA DIREITA */
+
+.bio-info-card{
+ background:linear-gradient(180deg,#0b1330,#0a1028);
+ border-radius:22px;
+ padding:20px;
+ border:1px solid var(--bio-border);
+ box-shadow:0 10px 40px rgba(0,0,0,.25);
+ display:flex;
+ flex-direction:column;
+ gap:14px;
+}
+
+.bio-info-tags{
+ display:flex;
+ gap:8px;
+ flex-wrap:wrap;
+}
+
+.bio-info-tags span{
+ padding:6px 12px;
+ border-radius:999px;
+ font-size:11px;
+ font-weight:700;
+ background:rgba(34,197,94,.15);
+ color:#22c55e;
+ border:1px solid rgba(34,197,94,.4);
+}
+
+.bio-info-card h3{
+ margin:0;
+ font-size:18px;
+}
+
+.bio-info-card p{
+ margin:0;
+ color:#9fb3c8;
+}
+
+.bio-metric-boxes{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:12px;
+}
+
+.bio-metric{
+ background:linear-gradient(180deg,#0c1430,#0a1028);
+ border-radius:14px;
+ padding:14px;
+ border:1px solid rgba(255,255,255,.05);
+}
+
+.bio-metric div{
+ font-weight:900;
+/* color:#2dd4bf;
+ font-size:18px; */
+}
+
+.bio-metric span{
+font-size: 10px;
+color: #7fe3ff;
+}
+
+.bio-alert{
+ font-size:12px;
+ padding:12px;
+ border-radius:12px;
+ background:rgba(250,204,21,.12);
+ border:1px solid rgba(250,204,21,.4);
+ color:#fde68a;
+}
+
+span.required {
+    color: #f2994a;
+    font-size: 11px;
+}
+
+.metric-label {
+    font-size: 11px;
+    color: #a5a9dd;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 3px;
+}
+
+.bio-field select,
+.bio-field option{
+  background-color:#050816;
+  color:#fff;
+}
+
